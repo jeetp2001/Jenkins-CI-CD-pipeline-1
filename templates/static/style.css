@@ -1,0 +1,13 @@
+h1 {
+    align-content: center;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: rgb(169, 89, 89);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
