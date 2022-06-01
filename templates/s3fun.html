@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h2 align="center">
+            <u>Amazon S3 buckets</u>
+        </h2>
+        <br>
+        <div align="center">
+            <h3>List all the s3 buckets</h3>
+            <form action="/lists3">
+                <input type="submit" value="LIST S3 BUCKETS">
+            </form>
+        </div>
+        <br>
+        <div align="center">
+            <form action="/s3bucket" method="post">
+                Mention the number of buckets : <input type="number" value=1><br><br>
+                Mention the name of bucket : <input type="text" name="bucname" placeholder="Globally Unique Name">
+                <input type="submit" value="CREATE">
+            </form>
+        </div> 
+        <br>
+        <div align="center">
+            <form action="/indexHandler">
+                <input type="submit" value="GO BACK">
+            </form>
+        </div>
+    </body>
+
+</html>

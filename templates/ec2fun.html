@@ -1,0 +1,30 @@
+<html>
+<h1 align="center">
+    <u>Amazon EC2 Instances</u>
+</h1>
+<br>
+
+<div align="center">
+    <form action="/ec2showins"> 
+        <h3>Click here for listing all running EC2 instances <br><br>
+        <input type="submit" value="SHOW EC2 INSTANCES"></h3>
+    </form>
+</div>
+<div align="center">
+    <h3>List of available EC2 instances</h3>
+</div>
+
+<div align="center">
+    <form action="/ec2t2micro" method="post"> 
+        <b>Click here for creating t2.micro EC2 instance</b><br>
+        <input type="number" value=1 name="noi">
+        <input type="submit" value="CREATE">
+    </form>
+</div>
+<br>
+<div>
+    <form action="/indexHandler" align="center">
+        <input type="submit" value="GO BACK">
+    </form>
+</div>
+</html>

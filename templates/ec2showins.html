@@ -1,0 +1,36 @@
+<html>
+<body>
+    <h2 align="center">
+        List of all EC2 instances
+    </h2>
+    <div align="center">
+    <p align="center">
+        {{ range . }}
+            {{ range .Instances }}
+                <p align="center">---------------------------------------------------------------------</p>
+                <div align="center">
+                    <form action="/stopec2ins" method="POST">
+                        Instance ID : <input type="text" value="{{ .InstanceId }}" name="insid"> 
+                        Instance State : <input type="text" value="{{ .State.Name }}" name="insstate"> 
+                        <input type="submit" value="STOP">
+                    </form>
+                </div>
+                <div align="center">
+                    <form action="/delec2ins" method="POST">
+                        Instance ID : <input type="text" value="{{ .InstanceId }}" name="insid"> 
+                        Instance State : <input type="text" value="{{ .State.Name }}" name="insstate"> 
+                        <input type="submit" value="DELETE">
+                    </form>
+                </div>
+                <p align="center">---------------------------------------------------------------------</p>
+            {{ end }}
+        {{ end }}
+    </p>
+    </div>
+    <div align="center">
+        <form action="/ec2fun">
+            <input type="submit" value="GO BACK">
+        </form>
+    </div>
+</body>
+</html>

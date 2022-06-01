@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h2 align="center">
+            List of all S3 buckets
+        </h2>
+        <div align="center">
+        <p align="center">
+            {{ range . }}
+            <p align="center">---------------------------------------------------------------------</p>
+            <div>
+                <form action="/delallitems" method="post">
+                    Bucket Name : <input type="text" value="{{ .Name }}" name="s3name">
+                    <input type="submit" value="Delete All Items">
+                </form>
+            </div>
+            <div>
+                <form action="/delbuc" method="post">
+                    Bucket Name : <input type="text" value="{{ .Name }}" name="s3name">
+                    <input type="submit" value="Delete Bucket">
+                </form>
+            </div>
+            {{ end }}
+        </p>
+        </div>
+        <div align="center">
+            <form action="/s3fun">
+                <input type="submit" value="GO BACK">
+            </form>
+        </div>
+    </body>
+</html>
